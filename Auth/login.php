@@ -143,9 +143,11 @@ if (isset($_POST['login'])) {
     <button type="submit" class="btn" name="login">Login</button>
 
     <div class="other-section">
+
         <button type="submit" class="btn-forgot-password">Forgot Password?</button>
 
-        <button type="submit" class="btn-register-now">Register Now</button>
+        <a href="student_registration.php" type="submit" class="btn-register-now">Register Now</a>
+
     </div>
 </form>
 

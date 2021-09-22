@@ -1,5 +1,4 @@
 
-
 <?php
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -7,7 +6,7 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 $error_message_for_full_name = "";
 $error_message_for_email = "";
@@ -273,7 +272,7 @@ if(isset($_POST['register'])){
             
                     if(mysqli_query($connection, $insert)){
                         echo "Verification Code Sent!";
-                        header("location: account-confirmation.php");
+                        header("location: login.php");
                         exit;
                 }
 
@@ -300,7 +299,7 @@ if(isset($_POST['register'])){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/student_registration.css">
+    <link rel="stylesheet" href="../css/student_registration.css">
 </head>
 
 <body>
@@ -365,7 +364,7 @@ if(isset($_POST['register'])){
         <button type="submit" class="btn" name="register">Register</button>
 
         <div class="other-section">
-            <button type="submit" class="btn-forgot-password" ><a href="Auth/login.php" style="text-decoration:none; color:#fff;">Login Now</a></button>
+            <button type="submit" class="btn-forgot-password" ><a href="login.php" style="text-decoration:none; color:#fff;">Login Now</a></button>
         </div>
     </form>
 

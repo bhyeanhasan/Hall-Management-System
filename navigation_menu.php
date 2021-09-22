@@ -1,5 +1,7 @@
 <?php
 session_start();
+include 'Middleware/middleware.php';
+include 'Middleware/student_middleware.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,12 +15,7 @@ session_start();
 
 <div class="topnav" id="myTopnav">
     <a href="#bbsmrh" class="active">BBSMRH</a>
-    <?php
-    if (isset($_SESSION['name']))
-    {
-    ?>
-        <a href="#profile"><?php echo $_SESSION['name'] ?></a>
-    <?php } ?>
+
     <div class="dropdown">
         <button class="dropbtn">Seat
             <i class="fa fa-caret-down"></i>
@@ -32,7 +29,21 @@ session_start();
     <a href="#notice">Notice</a>
 
     <a href="#setting">Settings</a>
-    <a href="Auth/logout.php">Log Out</a>
+
+    <?php
+    if (isset($_SESSION['name'])) {
+    ?>
+        <a style="float: right" href="Auth/logout.php">Log Out</a>
+
+        <a style="float: right" href="#profile"><?php echo $_SESSION['name'] ?></a>
+
+    <?php
+    } else {
+    ?>
+        <a style="float: right" href="Auth/login.php">Log In</a>
+    <?php
+    }
+    ?>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
@@ -40,28 +51,6 @@ session_start();
     <form action="" method="post">
         <h1 class="header-text">Bangabandhu Sheikh Mujibur Rahman Hall</h1>
 
-        <div class="input-container">
-            <i class="fa fa-envelope icon"></i>
-            <input class="input-field" type="email" placeholder="<?php $email ?>" name="email">
-        </div>
-
-        <div class="input-container">
-            <i class="fa fa-key icon"></i>
-            <input class="input-field" type="password" placeholder="Password" name="psw">
-        </div>
-
-        <div class="input-container">
-            <i class="fa fa-user-circle-o icon"></i>
-            <input class="input-field" type="text" placeholder="Border Number" name="psw">
-        </div>
-
-        <button type="submit" class="btn">Login</button>
-
-        <div class="other-section">
-            <button type="submit" class="btn-forgot-password">Forgot Password?</button>
-
-            <button type="submit" class="btn-register-now">Register Now</button>
-        </div>
     </form>
 </div>
 
