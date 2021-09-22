@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +13,12 @@
 
 <div class="topnav" id="myTopnav">
   <a href="#bbsmrh" class="active">BBSMRH</a>
-  <a href="#profile">Profile</a>
-  <div class="dropdown">
+    <?php
+    if (isset($_SESSION['name']))
+    {
+        ?>
+        <a href="#profile"><?php echo $_SESSION['name'] ?></a>
+    <?php } ?>  <div class="dropdown">
     <button class="dropbtn">Seat 
       <i class="fa fa-caret-down"></i>
     </button>
@@ -25,7 +32,7 @@
   <a href="#add_admin">Add Admin</a>
   <a href="#add_staff">Add Staff</a>
   <a href="#setting">Settings</a>
-  <a href="#logout">Log Out</a>
+  <a href="Auth/logout.php">Log Out</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 

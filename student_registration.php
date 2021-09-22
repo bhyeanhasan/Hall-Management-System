@@ -365,7 +365,7 @@ if(isset($_POST['register'])){
         <button type="submit" class="btn" name="register">Register</button>
 
         <div class="other-section">
-            <button type="submit" class="btn-forgot-password" ><a href="login.php" style="text-decoration:none; color:#fff;">Login Now</a></button>
+            <button type="submit" class="btn-forgot-password" ><a href="Auth/login.php" style="text-decoration:none; color:#fff;">Login Now</a></button>
         </div>
     </form>
 
