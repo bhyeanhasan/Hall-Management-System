@@ -12,7 +12,7 @@ session_start();
 
 <div class="topnav" id="myTopnav">
 
-    <a href="#bbsmrh" class="active">BBSMRH</a>
+    <a href="index.php" class="active">BBSMRH</a>
     <a href="#stypend">Notice</a>
 
     <div class="dropdown">
@@ -32,16 +32,17 @@ session_start();
     <?php
     if (isset($_SESSION['name'])) {
         ?>
-        <a style="float: right" href="#profile"><?php echo $_SESSION['name'] ?></a>
         <a style="float: right" href="Auth/logout.php">Log Out</a>
+        <a style="float: right" href="admin_panel.php"><?php echo $_SESSION['name'] ?></a>
 
     <?php
     }
-    else{
-
+    else
+    {
     ?>
         <a style="float: right" href="Auth/login.php">Log In</a>
-    <?php
+        <a style="float: right" href="Auth/student_registration.php">Register</a>
+        <?php
     }
     ?>
 

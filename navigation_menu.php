@@ -14,7 +14,7 @@ include 'Middleware/student_middleware.php';
 <body>
 
 <div class="topnav" id="myTopnav">
-    <a href="#bbsmrh" class="active">BBSMRH</a>
+    <a href="index.php" class="active">BBSMRH</a>
 
     <div class="dropdown">
         <button class="dropbtn">Seat
@@ -26,6 +26,8 @@ include 'Middleware/student_middleware.php';
         </div>
     </div>
     <a href="#stypend">Stypend</a>
+    <a href="#stypend">Stypend</a>
+
     <a href="#notice">Notice</a>
 
     <a href="#setting">Settings</a>

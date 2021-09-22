@@ -14,7 +14,7 @@ include 'Middleware/staff_middleware.php';
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="#bbsmrh" class="active">BBSMRH</a>
+  <a href="index.php" class="active">BBSMRH</a>
    <div class="dropdown">
     <button class="dropbtn">Seat 
       <i class="fa fa-caret-down"></i>
@@ -32,8 +32,8 @@ include 'Middleware/staff_middleware.php';
     <?php
     if (isset($_SESSION['name'])) {
         ?>
-        <a style="float: right" href="#profile"><?php echo $_SESSION['name'] ?></a>
         <a style="float: right" href="Auth/logout.php">Log Out</a>
+        <a style="float: right" href="#profile"><?php echo $_SESSION['name'] ?></a>
 
         <?php
     }
