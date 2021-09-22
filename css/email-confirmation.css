@@ -1,0 +1,163 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body {
+  margin:0;
+  padding: 0;
+  font-family:'Monsterrat';
+  /*background: url(../img/bbhall.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+
+  background: rgb(95,86,231);
+  background: linear-gradient(90deg, rgba(95,86,231,1) 0%, rgba(71,114,221,0.896796218487395) 0%, rgba(86,159,231,1) 49%, rgba(86,157,231,1) 100%, rgba(71,127,221,1) 100%);
+  text-align: center;
+}
+
+.header-text{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-family: 'Monsterrat', ;
+    text-shadow: 3px 3px rgb(0, 152, 253);
+  }
+
+  .instruction{
+      font-family: 'Monsterrat';
+      color: #fff;
+      font-weight: lighter;
+  }
+  
+  form {
+    max-width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+  }
+  
+  .input-container {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 15px;
+  }
+  
+  #role {
+    width: 100%;
+    border: 1px solid #fff;
+    font-weight: 100;
+    font-family: 'Raleway', cursive;
+    font-size: 120%;
+    color: #757575;
+  }
+  
+  #role:focus{
+    border: 2px solid #fff;
+  }
+  
+  .icon {
+    padding: 10px;
+    background: rgb(95,86,231);
+    background: linear-gradient(90deg, rgba(95,86,231,1) 0%, rgba(71,114,221,0.896796218487395) 0%, rgba(86,159,231,1) 49%, rgba(86,157,231,1) 100%, rgba(71,127,221,1) 100%);
+    
+    color: white;
+    min-width: 30px;
+    text-align: center;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgb(255, 255, 255);
+    font-family: 'Raleway';
+    font-size: 120%;
+  }
+  
+  .input-field:focus {
+    /*color: rgb(10, 214, 250);*/
+    color: rgba(71,127,221,1);
+    
+    border: 2px solid rgba(71,127,221,1);
+  }
+  
+  /* Set a style for the submit button */
+  .btn {
+    /*background-color: rgb(10, 214, 250);
+    color: white;*/
+    background: rgb(95,86,231);
+    background: linear-gradient(90deg, rgba(95,86,231,1) 0%, rgba(71,114,221,0.896796218487395) 0%, rgba(86,159,231,1) 49%, rgba(95,86,231,1) 100%, rgba(95,86,231,1) 100%);
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-family: 'Reggae One', cursive;
+    font-size: 120%;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+    background: rgb(130, 233, 252);
+    background: linear-gradient(90deg, rgb(130, 233, 252) 0%, rgb(130, 233, 252) 0%, rgba(86,159,231,1) 49%, rgb(130, 233, 252) 100%, rgb(130, 233, 252) 100%);
+    
+  }
+  
+  .other-section{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+  }
+  
+  .btn-forgot-password{
+    background: rgb(95,86,231);
+    background: linear-gradient(90deg, rgba(95,86,231,1) 0%, rgba(71,114,221,0.896796218487395) 0%, rgba(86,159,231,1) 49%, rgba(95,86,231,1) 100%, rgba(95,86,231,1) 100%);
+    
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-family: 'Reggae One', cursive;
+    font-size: 120%;
+  }
+  
+  .btn-forgot-password:hover{
+    background: rgb(130, 233, 252);
+    background: linear-gradient(90deg, rgb(130, 233, 252) 0%, rgb(130, 233, 252) 0%, rgba(86,159,231,1) 49%, rgb(130, 233, 252) 100%, rgb(130, 233, 252) 100%);
+    
+  }
+  
+  .btn-register-now{
+    background: rgb(95,86,231);
+    background: linear-gradient(90deg, rgba(95,86,231,1) 0%, rgba(71,114,221,0.896796218487395) 0%, rgba(86,159,231,1) 49%, rgba(95,86,231,1) 100%, rgba(95,86,231,1) 100%);
+    
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-family: 'Reggae One', cursive;
+    font-size: 120%;
+  }
+  
+  .btn-register-now:hover{
+    background: rgb(130, 233, 252);
+    background: linear-gradient(90deg, rgb(130, 233, 252) 0%, rgb(130, 233, 252) 0%, rgba(86,159,231,1) 49%, rgb(130, 233, 252) 100%, rgb(130, 233, 252) 100%);
+    
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .header-text{
+        font-size: 180%;
+    }
+  
+    .other-section{
+        font-size: 75%;
+    }
+  }

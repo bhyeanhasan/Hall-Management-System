@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Lobster&family=Raleway:wght@500&family=Reggae+One&display=swap');
+
+        body {
+            text-align: center;
+            background: url(../img/bbhall.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .header-text{
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            font-family: 'Reggae One', cursive;
+            text-shadow: 3px 3px rgb(0, 152, 253);
+            margin-bottom: 10%;
+        }
+        .header-text h1{
+            margin-top: 5%;
+        }
+
+        form {
+            max-width: 50%;
+            margin-left: 25%;
+            margin-top: 12%;
+        }
+
+        .input-container {
+            display: -ms-flexbox;
+            /* IE10 */
+            display: flex;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        #role {
+            width: 100%;
+            border: 1px solid #fff;
+            font-weight: 100;
+            font-family: 'Raleway', cursive;
+            font-size: 120%;
+        }
+
+        #role:focus{
+            border: 2px solid rgb(10, 214, 250);
+        }
+
+        .icon {
+            padding: 10px;
+            background: rgb(10, 214, 250);
+            color: white;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            border: 1px solid rgb(255, 255, 255);
+            font-family: 'Raleway';
+            font-size: 120%;
+        }
+
+        .input-field:focus {
+            color: rgb(10, 214, 250);
+            border: 2px solid rgb(10, 214, 250);
+        }
+
+        /* Set a style for the submit button */
+        .btn {
+            background-color: rgb(10, 214, 250);
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+            font-family: 'Reggae One', cursive;
+            font-size: 120%;
+        }
+
+        .btn:hover {
+            opacity: 1;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .header-text{
+                font-size: 180%;
+            }
+
+            .other-section{
+                font-size: 75%;
+            }
+        }
