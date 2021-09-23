@@ -71,6 +71,7 @@ if (isset($_POST['login'])) {
                 while($row = mysqli_fetch_assoc($result_search_student)) {
                     $_SESSION['name'] = $row['student_full_name'];
                     $_SESSION['role'] = "student";
+                    $_SESSION['id'] = $row['student_border_number'];
                 }
                 header("location: ../navigation_menu.php");
                 exit;
