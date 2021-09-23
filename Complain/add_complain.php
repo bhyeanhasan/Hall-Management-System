@@ -51,7 +51,7 @@ if(isset($_POST['complain'])){
     <input class="input-field" name="complain_subject" type="text" placeholder="Complain Subject" required>
     </div>
     <div class="input-container">
-    <input style="height: 300px" class="input-field" name="complain_body" type="text" placeholder="Complain Body" required>
+        <textarea  style="height: 300px" class="input-field" name="complain_body"  placeholder="Complain Body" required></textarea>
     </div>
     <input class="input-field" name ="complain" type="submit">
 </form>

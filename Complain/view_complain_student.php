@@ -26,10 +26,10 @@ $result = mysqli_query($connection, $sql);
 
     if (mysqli_num_rows($result) > 0) {
             while ($complain = mysqli_fetch_assoc($result)) {
-    ?>
-            <h2><?php echo $complain['complain_subject'] ?></h2>
+    ?>      <a href="complain_student.php?id=<?php echo $complain['id'] ?>"><h2><?php echo $complain['complain_subject'] ?></h2></a>
             <p><?php echo $complain['complain_time'] ?></p>
             <p><?php echo $complain['complain'] ?></p>
+            <p><?php echo $complain['complain_status'] ?></p>
     <?php
             }
         }

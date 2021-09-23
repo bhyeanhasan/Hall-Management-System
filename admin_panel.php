@@ -1,22 +1,25 @@
 <?php
 session_start();
+include 'database_connection.php';
 include 'Middleware/middleware.php';
 include 'Middleware/admin_middleware.php';
+
+$sql = "SELECT * FROM complain";
+$result = mysqli_query($connection, $sql);
+$complain_count = mysqli_num_rows($result);
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <link rel="stylesheet" href="css/admin_panel.css">
 </head>
 <body>
 
 <div class="topnav" id="myTopnav">
     <a href="index.php" class="active">BBSMRH</a>
-
-
 
     <div class="dropdown">
         <button class="dropbtn">Seat
@@ -29,6 +32,7 @@ include 'Middleware/admin_middleware.php';
     </div>
     <a href="#stypend">Approve Stypend</a>
     <a href="#notice">Send Notice</a>
+    <a href="Complain/view_complain_admin.php">Complain <sub style="color: yellow;font-weight: bold"><?php echo $complain_count ?></sub></a>
     <a href="#add_admin">Add Admin</a>
     <a href="#add_staff">Add Staff</a>
     <a href="#setting">Settings</a>

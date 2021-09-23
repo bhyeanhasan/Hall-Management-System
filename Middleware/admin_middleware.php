@@ -1,4 +1,5 @@
 <?php
+
 if($_SESSION['role'] != 'admin')
 {
     if($_SESSION['role'] == 'student')
@@ -10,4 +11,5 @@ if($_SESSION['role'] != 'admin')
         header("location: staff_panel.php");
     }
 }
+
 ?>

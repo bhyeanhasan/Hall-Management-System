@@ -2,7 +2,7 @@
 session_start();
 include '../database_connection.php';
 include '../Middleware/middleware.php';
-include '../Middleware/student_middleware.php';
+include '../Middleware/admin_middleware.php';
 
 $border = $_SESSION['id'];
 $sql = "SELECT * FROM complain";
@@ -22,17 +22,60 @@ $result = mysqli_query($connection, $sql);
 <body>
 
 <div>
-    <?php
 
+
+    <?php
     if (mysqli_num_rows($result) > 0) {
         while ($complain = mysqli_fetch_assoc($result)) {
             ?>
-            <h2><?php echo $complain['complain_subject'] ?></h2>
-            <p><?php echo $complain['student_name'] ?></p>
-            <p><?php echo $complain['student_border_number'] ?></p>
-            <p><?php echo $complain['complain_time'] ?></p>
-            <p><?php echo $complain['complain'] ?></p>
-            <p><?php echo $complain['complain_status'] ?></p>
+
+            <div>
+                <?php
+                if($complain['complain_status']== 'pending')
+                {?>
+                    <div style="background-color: red;margin-bottom: 10px;padding: 20px">
+                        <a href="complain_admin.php?id=<?php echo $complain['id'] ?>"><h2><?php echo $complain['complain_subject'] ?></h2></a>
+                        <p><?php echo $complain['student_name'] ?></p>
+                        <p><?php echo $complain['student_border_number'] ?></p>
+                        <p><?php echo $complain['complain_time'] ?></p>
+                        <p><?php echo $complain['complain'] ?></p>
+                        <p><?php echo $complain['complain_status'] ?></p>
+                    </div>
+                <?php
+                }
+                elseif ($complain['complain_status']== 'approved'){
+                    ?>
+                <div style="background-color: blue;margin-bottom: 10px;padding: 20px">
+                    <a href="complain_admin.php?id=<?php echo $complain['id'] ?>"><h2><?php echo $complain['complain_subject'] ?></h2></a>
+                    <p><?php echo $complain['student_name'] ?></p>
+                    <p><?php echo $complain['student_border_number'] ?></p>
+                    <p><?php echo $complain['complain_time'] ?></p>
+                    <p><?php echo $complain['complain'] ?></p>
+                    <p><?php echo $complain['complain_status'] ?></p>
+                </div>
+                <?php } else { ?>
+                    <div style="background-color: green;margin-bottom: 10px;padding: 20px">
+                        <a href="complain_admin.php?id=<?php echo $complain['id'] ?>"><h2><?php echo $complain['complain_subject'] ?></h2></a>
+                        <p><?php echo $complain['student_name'] ?></p>
+                        <p><?php echo $complain['student_border_number'] ?></p>
+                        <p><?php echo $complain['complain_time'] ?></p>
+                        <p><?php echo $complain['complain'] ?></p>
+                        <p><?php echo $complain['complain_status'] ?></p>
+                    </div>
+                <?php
+
+                }
+                ?>
+
+            </div>
+            <div style="width: 30%;float: right">
+
+            </div>
+            <div style="width: 30%;float: right">
+
+            </div>
+
+
     <?php
         }
     }

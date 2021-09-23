@@ -53,6 +53,7 @@ if (isset($_POST['login'])) {
                 while($row = mysqli_fetch_assoc($result_search_admin)) {
                     $_SESSION['name'] = $row['admin_name'];
                     $_SESSION['role'] = "admin";
+                    $_SESSION['id'] = $row['id'];
                 }
                 header("location: ../admin_panel.php");
                 exit;
@@ -89,6 +90,7 @@ if (isset($_POST['login'])) {
                 while($row = mysqli_fetch_assoc($result_search_staff)) {
                     $_SESSION['name'] = $row['staff_name'];
                     $_SESSION['role'] = "staff";
+                    $_SESSION['id'] = $row['id'];
                 }
                 header("location: ../staff_panel.php");
                 exit;
