@@ -13,7 +13,7 @@ session_start();
 <div class="topnav" id="myTopnav">
 
     <a href="index.php" class="active">BBSMRH</a>
-    <a href="#stypend">Notice</a>
+    <a href="Notice/view_notice.php">Notice</a>
 
     <div class="dropdown">
         <button class="dropbtn">Administration

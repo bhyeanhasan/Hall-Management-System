@@ -28,7 +28,7 @@ include 'Middleware/student_middleware.php';
     <a href="#stypend">Stypend</a>
     <a href="Complain/add_complain.php">Complain to Provost</a>
     <a href="Complain/view_complain_student.php">Complain Status</a>
-    <a href="#notice">Notice</a>
+    <a href="Notice/view_notice.php">Notice</a>
 
     <a href="#setting">Settings</a>
 

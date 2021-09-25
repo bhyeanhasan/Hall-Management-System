@@ -31,7 +31,8 @@ $complain_count = mysqli_num_rows($result);
         </div>
     </div>
     <a href="#stypend">Approve Stypend</a>
-    <a href="#notice">Send Notice</a>
+    <a href="Notice/add_notice.php">Send Notice</a>
+    <a href="Notice/view_notice.php">View Notice</a>
     <a href="Complain/view_complain_admin.php">Complain <sub style="color: yellow;font-weight: bold"><?php echo $complain_count ?></sub></a>
     <a href="#add_admin">Add Admin</a>
     <a href="#add_staff">Add Staff</a>

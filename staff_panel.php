@@ -25,7 +25,7 @@ include 'Middleware/staff_middleware.php';
     </div>
   </div> 
   <a href="#stypend">Approve Stypend</a>
-  <a href="#notice">Send Notice</a>
+  <a href="Notice/view_notice.php">Notice</a>
   <a href="#add_admin">Add Admin</a>
   <a href="#add_staff">Add Staff</a>
   <a href="#setting">Settings</a>

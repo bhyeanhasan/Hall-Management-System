@@ -2,17 +2,17 @@
 session_start();
 include "../database_connection.php";
 include "../Middleware/middleware.php";
-include "../Middleware/student_middleware.php";
+include "../Middleware/admin_middleware.php";
 
 $id=$_GET['id'];
-$sql = "SELECT * FROM complain WHERE id ='$id'";
+$sql = "SELECT * FROM notice WHERE id ='$id'";
 $result = mysqli_query($connection, $sql);
 
 if (mysqli_num_rows($result) > 0) {
-while ($complain = mysqli_fetch_assoc($result)) {
-    $sub = $complain['complain_subject'];
-    $body = $complain['complain'];
-}
+    while ($notice = mysqli_fetch_assoc($result)) {
+        $sub = $notice['notice_sub'];
+        $body = $notice['notice'];
+    }
 }
 
 mysqli_close($connection);
@@ -25,7 +25,7 @@ if(isset($_POST['update']))
     $body_new = $_POST['body'];
 
 
-    $sql = "UPDATE complain SET complain_subject='$subject',complain='$body_new' WHERE id='$id'";
+    $sql = "UPDATE notice SET notice_sub='$subject',notice='$body_new' WHERE id='$id'";
 
     if (mysqli_query($connection, $sql)) {
         header("location: view_notice.php");
@@ -41,7 +41,7 @@ if(isset($_POST['delete']))
 {
     include '../database_connection.php';
 
-    $sql = "DELETE FROM complain WHERE id='$id'";
+    $sql = "DELETE FROM notice WHERE id='$id'";
 
     if (mysqli_query($connection, $sql)) {
         header("location: view_notice.php");
