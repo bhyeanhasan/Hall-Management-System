@@ -21,8 +21,8 @@ include 'Middleware/student_middleware.php';
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <a href="#">Request Seat</a>
-            <a href="#">Cancel Seat</a>
+            <a href="Seat/request_seat.php">Request Seat</a>
+            <a href="Seat/request_cancel_seat.php">Cancel Seat</a>
         </div>
     </div>
     <a href="#stypend">Stypend</a>

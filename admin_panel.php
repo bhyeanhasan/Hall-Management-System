@@ -26,8 +26,8 @@ $complain_count = mysqli_num_rows($result);
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <a href="#">Manage Seat Request</a>
-            <a href="#">Manage Seat Cancellation</a>
+            <a href="Seat/all_seat_request.php">Manage Seat Request</a>
+            <a href="Seat/allotted_seats.php">Allotted Seats</a>
         </div>
     </div>
     <a href="#stypend">Approve Stypend</a>

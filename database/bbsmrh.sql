@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 23, 2021 at 06:21 AM
+-- Generation Time: Sep 26, 2021 at 05:53 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.30
 
@@ -42,8 +42,10 @@ CREATE TABLE `complain` (
 --
 
 INSERT INTO `complain` (`id`, `student_border_number`, `student_name`, `complain_subject`, `complain`, `complain_status`, `complain_time`) VALUES
-(1, 'fddg', 'fdga', 'dsfgdfsg', 'dfsgfd', 'pending', '2021-09-23 00:00:00'),
-(2, 'vbx', 'fghdgfjz', 'sdafdsf', 'ruyiryiyiiyuiuri', 'pending', '2021-09-23 00:00:00');
+(1, 'fddg', 'fdga', 'dsfgdfsg', 'dfsgfd', 'solved', '2021-09-23 00:00:00'),
+(2, 'vbx', 'fghdgfjz', 'sdafdsf', 'ruyiryiyiiyuiuri', 'solved', '2021-09-23 00:00:00'),
+(3, '69', 'Kamrul Hasan', 'amim  ami', 'amik asi', 'approved', '2021-09-23 18:46:01'),
+(9, '69', 'Kamrul Hasan', 'maramari', 'mar salare mar', 'pending', '2021-09-23 20:41:34');
 
 -- --------------------------------------------------------
 
@@ -66,6 +68,26 @@ CREATE TABLE `notice` (
 INSERT INTO `notice` (`id`, `notice_by`, `notice_sub`, `notice`, `notice_time`) VALUES
 (1, '67', 'dfdasgfdg', 'dfgadfgfdgh', '0000-00-00 00:00:00'),
 (2, 'as', 'zxbfb', 'gjghjg', '2021-09-23 10:19:36');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `seat`
+--
+
+CREATE TABLE `seat` (
+  `student_border_number` varchar(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `request` varchar(100) NOT NULL DEFAULT 'seat_pending',
+  `alloted_room` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `seat`
+--
+
+INSERT INTO `seat` (`student_border_number`, `name`, `request`, `alloted_room`) VALUES
+('69', 'Kamrul Hasan', 'done', '101');
 
 -- --------------------------------------------------------
 
@@ -171,6 +193,12 @@ ALTER TABLE `notice`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `seat`
+--
+ALTER TABLE `seat`
+  ADD PRIMARY KEY (`student_border_number`);
+
+--
 -- Indexes for table `tbl_student_registration`
 --
 ALTER TABLE `tbl_student_registration`
@@ -184,7 +212,7 @@ ALTER TABLE `tbl_student_registration`
 -- AUTO_INCREMENT for table `complain`
 --
 ALTER TABLE `complain`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `notice`
