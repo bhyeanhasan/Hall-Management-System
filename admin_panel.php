@@ -34,9 +34,6 @@ $complain_count = mysqli_num_rows($result);
     <a href="Notice/add_notice.php">Send Notice</a>
     <a href="Notice/view_notice.php">View Notice</a>
     <a href="Complain/view_complain_admin.php">Complain <sub style="color: yellow;font-weight: bold"><?php echo $complain_count ?></sub></a>
-    <a href="#add_admin">Add Admin</a>
-    <a href="#add_staff">Add Staff</a>
-    <a href="#setting">Settings</a>
 
     <?php
     if (isset($_SESSION['name'])) {
@@ -58,34 +55,6 @@ $complain_count = mysqli_num_rows($result);
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
-<div class="student-dashboard">
-    <form action="" method="post">
-        <h1 class="header-text">Bangabandhu Sheikh Mujibur Rahman Hall</h1>
-
-        <div class="input-container">
-            <i class="fa fa-envelope icon"></i>
-            <input class="input-field" type="email" placeholder="<?php $email ?>" name="email">
-        </div>
-
-        <div class="input-container">
-            <i class="fa fa-key icon"></i>
-            <input class="input-field" type="password" placeholder="Password" name="psw">
-        </div>
-
-        <div class="input-container">
-            <i class="fa fa-user-circle-o icon"></i>
-            <input class="input-field" type="text" placeholder="Border Number" name="psw">
-        </div>
-
-        <button type="submit" class="btn">Login</button>
-
-        <div class="other-section">
-            <button type="submit" class="btn-forgot-password">Forgot Password?</button>
-
-            <button type="submit" class="btn-register-now">Register Now</button>
-        </div>
-    </form>
-</div>
 
 <script src="js/navigation_menu.js"></script>
 

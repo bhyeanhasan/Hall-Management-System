@@ -30,7 +30,6 @@ include 'Middleware/student_middleware.php';
     <a href="Complain/view_complain_student.php">Complain Status</a>
     <a href="Notice/view_notice.php">Notice</a>
 
-    <a href="#setting">Settings</a>
 
     <?php
     if (isset($_SESSION['name'])) {
